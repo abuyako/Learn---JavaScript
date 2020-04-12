@@ -73,39 +73,42 @@
 
 // Function Constructor is a pattern for writting a blueprint and we write variable with a capital letter
 
-var john = {
-    name: 'John',
-    yearOfBirth: 1990,
-    job: 'teacher'
-}; // object literial
+// var john = {
+//     name: 'John',
+//     yearOfBirth: 1990,
+//     job: 'teacher'
+// }; // object literial
 
-var Person = function(name, yearOfBirth, job) {
-    this.name = name;
-    this.yearOfBirth = yearOfBirth;
-    this.job = job;
-}
+// var Person = function(name, yearOfBirth, job) {
+//     this.name = name;
+//     this.yearOfBirth = yearOfBirth;
+//     this.job = job;
+// }
 
 // Now we create a prototype properties to inherite
 
-Person.prototype.calculeAge = 
-function() {
-    console.log(2016 - this.yearOfBirth);
-};
+// Person.prototype.calculeAge = 
+// function() {
+//     console.log(2016 - this.yearOfBirth);
+// };
 
-Person.prototype.lastName = 'Smith';
+// Person.prototype.lastName = 'Smith';
 // create object
 
-var john = new Person('John', 1990, 'teacher'); 
+// var john = new Person('John', 1990, 'teacher'); 
 // this is called instantiation
 // new means a brand new obj is created
 
-var jane = new Person ('Jane', 1996, 'designer');
-var mark = new Person ('Mark', 1948, 'retired');
+// var jane = new Person ('Jane', 1996, 'designer');
+// var mark = new Person ('Mark', 1948, 'retired');
 
-john.calculeAge();
-jane.calculeAge();
-mark.calculeAge();
+// john.calculeAge();
+// jane.calculeAge();
+// mark.calculeAge();
 
-console.log(john.lastName);
-console.log(jane.lastName);
-console.log(mark.lastName);
+// console.log(john.lastName);
+// console.log(jane.lastName);
+// console.log(mark.lastName);
+
+
+// object.create
