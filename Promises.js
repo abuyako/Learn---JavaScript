@@ -33,7 +33,7 @@ let promise = new Promise ((resolve, reject)=> {
 return promise;
 }
 
-myAsyncFun().then(
+myAsyncFun().then( // function that can handle the success response and accept two argument.
     ()=> console.log("Work Done")
 );
 
