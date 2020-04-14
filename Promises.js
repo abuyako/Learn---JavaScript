@@ -21,7 +21,7 @@
 
 function myAsyncFun(){
 let promise = new Promise ((resolve, reject)=> {
-    let error = true; // if something goes wrong
+    let error = true; // if something goes wrong and if you change the true to false its will be fine"
     // all asynchrounous code will be here, better calls, REST APIs
     // now we are gooing to simulate synchrosite
     setTimeout(()=>{
