@@ -32,4 +32,9 @@ let promise = new Promise ((resolve, reject)=> {
 
 return promise;
 }
+
+myAsyncFun().then(
+    ()=> console.log("Work Done")
+);
+
  
