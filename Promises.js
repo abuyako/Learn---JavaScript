@@ -21,15 +21,16 @@
 
 function myAsyncFun(){
 let promise = new Promise ((resolve, reject)=> {
-    let error = true; // if something goes wrong and if you change the true to false its will be fine"
+    let error = false; // if something goes wrong and if you change the true to false its will be fine"
     // all asynchrounous code will be here, better calls, REST APIs
     // now we are gooing to simulate synchrosite
     setTimeout(()=>{
         console.log("Working Asynchronously")
         if (error) {
-            reject();
+            // We can also pass the values while using the resolve and reject
+            reject("Error");
         }else {
-            resolve();
+            resolve("Done");
         }
         
     }
@@ -41,8 +42,8 @@ return promise;
 
 // invorking the promise
 myAsyncFun().then( // function that can handle the success response and accept two argument.
-    ()=> console.log("Work Done"),
-    ()=> console.log("Error")
+    (success)=> console.log(success),
+    (error)=> console.log(error)
 );
 
- 
+  
