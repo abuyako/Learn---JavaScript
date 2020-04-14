@@ -21,11 +21,17 @@
 
 function myAsyncFun(){
 let promise = new Promise ((resolve, reject)=> {
+    let error = true; // if something goes wrong
     // all asynchrounous code will be here, better calls, REST APIs
     // now we are gooing to simulate synchrosite
     setTimeout(()=>{
         console.log("Working Asynchronously")
-        resolve();
+        if (error) {
+            reject();
+        }else {
+            resolve();
+        }
+        
     }
      ,1000);
 });
@@ -33,8 +39,10 @@ let promise = new Promise ((resolve, reject)=> {
 return promise;
 }
 
+// invorking the promise
 myAsyncFun().then( // function that can handle the success response and accept two argument.
-    ()=> console.log("Work Done")
+    ()=> console.log("Work Done"),
+    ()=> console.log("Error")
 );
 
  
