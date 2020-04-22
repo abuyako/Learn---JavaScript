@@ -3,17 +3,33 @@
 // example request some data from a remote server like an API's
 
 // code samples
-const second = () => {
+// const second = () => {
+//     setTimeout(() => {
+//         console.log('Async Hey there');
+//     },2000);
+// }
+
+// const first = () => {
+//     console.log('Hey there!!');
+//     second();
+//     console.log('The end');
+// }
+
+
+// first();
+
+function getRecipe() {
     setTimeout(() => {
-        console.log('Async Hey there');
-    },2000);
+        const recipeID = [523, 883, 432, 974];
+        console.log(recipeID);
+
+        setTimeout((id) => {
+            const recipe = {title: 'Fresh tomato pasta', publisher: 'Abuyako'};
+            console.log(`${id}: ${recipe.title}`);
+        },1000, recipeID[2])
+
+    } ,1500);
 }
 
-const first = () => {
-    console.log('Hey there!!');
-    second();
-    console.log('The end');
-}
+getRecipe();
 
-
-first();
