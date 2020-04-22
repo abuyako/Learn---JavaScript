@@ -3,9 +3,16 @@
 // example request some data from a remote server like an API's
 
 // code samples
+const second = () => {
+    setTimeout(() => {
+        console.log('Async Hey there');
+    },2000);
+}
 
 const first = () => {
     console.log('Hey there!!');
+    second();
+    console.log('The end');
 }
 
 
