@@ -48,6 +48,10 @@
         } ,1500);
  });
 
+        const getRecipe = recID => {
+                
+        }
+
  getIDs
  .then(IDs => {
         console.log(IDs);
