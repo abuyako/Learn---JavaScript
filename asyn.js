@@ -18,18 +18,37 @@
 
 // first();
 
-function getRecipe() {
-    setTimeout(() => {
-        const recipeID = [523, 883, 432, 974];
-        console.log(recipeID);
+// function getRecipe() {
+//     setTimeout(() => {
+//         const recipeID = [523, 883, 432, 974];
+//         console.log(recipeID);
 
-        setTimeout((id) => {
-            const recipe = {title: 'Fresh tomato pasta', publisher: 'Abuyako'};
-            console.log(`${id}: ${recipe.title}`);
-        },1000, recipeID[2])
+//         setTimeout((id) => {
+//             const recipe = {title: 'Fresh tomato pasta', publisher: 'Abuyako'};
+//             console.log(`${id}: ${recipe.title} and publisher is ${recipe.publisher}`);
+//         },1000, recipeID[2])
 
-    } ,1500);
-}
+//     } ,1500);
+// }
 
-getRecipe();
+// getRecipe();
+
+// promise - object that keeps tracks about whether a certain event has happened already or not. 
+
+//         - Determines what happens after the events has happened. 
+//         - Implements the concepts of a future value that were expecting. 
+
+
+
+// coding for Promise
+
+ const getIDs = new Promise ((resolve, reject) => {
+        setTimeout(() => {
+                resolve([523, 883, 432, 974]);
+        } ,1500);
+ });
+
+ getIDs.then(IDs => {
+        console.log(IDs);
+ });
 
