@@ -42,21 +42,25 @@
 
 // coding for Promise
 
- const getIDs = new Promise ((resolve, reject) => {
-        setTimeout(() => {
-                resolve([523, 883, 432, 974]);
-        } ,1500);
- });
+//  const getIDs = new Promise ((resolve, reject) => {
+//         setTimeout(() => {
+//                 resolve([523, 883, 432, 974]);
+//         } ,1500);
+//  });
 
-        const getRecipe = recID => {
-                
-        }
+//         const getRecipe = recID => {
 
- getIDs
- .then(IDs => {
-        console.log(IDs);
- })
- .catch(error => {
-         console.log(error);
- });
+//         }
+
+//  getIDs
+//  .then(IDs => {
+//         console.log(IDs);
+//  })
+//  .catch(error => {
+//          console.log(error);
+//  });
+
+Asyn/Await was develop to consume promise and not to produce them and if you want to produce. 
+
+
 
